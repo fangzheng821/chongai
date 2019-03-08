@@ -1,4 +1,4 @@
-package io.renren.modules.app.entity;
+package io.renren.modules.app.entity.setting;
 
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
@@ -34,7 +34,7 @@ public class Member implements Serializable {
     //状态
     private Integer status=1;
     //创建时间
-    private Date createTime;
+    private Long createTime;
 
     public Long getId() {
         return id;
@@ -116,11 +116,11 @@ public class Member implements Serializable {
         this.status = status;
     }
 
-    public Date getCreateTime() {
+    public Long getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(Long createTime) {
         this.createTime = createTime;
     }
 }

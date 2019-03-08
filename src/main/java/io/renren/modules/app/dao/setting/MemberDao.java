@@ -1,7 +1,7 @@
-package io.renren.modules.app.dao;
+package io.renren.modules.app.dao.setting;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
-import io.renren.modules.app.entity.Member;
+import io.renren.modules.app.entity.setting.Member;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

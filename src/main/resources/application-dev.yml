@@ -57,4 +57,4 @@ spring:
                 #login-username: admin
                 #login-password: admin
 server:
-    port: 8080
+    port: 80

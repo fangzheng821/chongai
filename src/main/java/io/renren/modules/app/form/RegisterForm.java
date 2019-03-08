@@ -23,45 +23,44 @@ import javax.validation.constraints.NotBlank;
 
 /**
  * 注册表单
- *
- * @author Mark sunlightcs@gmail.com
- * @since 3.1.0 2018-01-25
+ * @author xukaijun
  */
 @ApiModel(value = "注册表单")
 public class RegisterForm {
-    @ApiModelProperty(value = "手机号",name = "mobile")
+    @ApiModelProperty(value = "手机号",example = "13301242325")
     private String mobile;
 
-    @ApiModelProperty(value = "登录账号")
-    @NotBlank(message="登录的账号")
+    @ApiModelProperty(value = "登录账号",example = "nickname")
+   // @NotBlank(message="登录的账号")
     private String identifier;
 
-    @ApiModelProperty(value = "登录账号")
+    @ApiModelProperty(value = "登录密码",example = "password")
     @NotBlank(message="登录的密码")
     private String credential;
 
-    @ApiModelProperty(value = "昵称")
+    @ApiModelProperty(value = "昵称",example = "xukaka")
     private String nickName;
 
-    @ApiModelProperty(value = "真实姓名")
+    @ApiModelProperty(value = "真实姓名",example = "徐卡卡")
     private String realName;
 
-    @ApiModelProperty(value = "头像图片")
+    @ApiModelProperty(value = "头像图片",example = "http://www.baidu.com")
     private String avatar;
 
-    @ApiModelProperty(value = "个性签名")
+    @ApiModelProperty(value = "个性签名",example = "hello world")
     private String selfIntro;
 
-    @ApiModelProperty(value = "地址")
+    @ApiModelProperty(value = "地址",example = "北京市")
     private String address;
 
-    @ApiModelProperty(value = "性别0男，1女")
+    @ApiModelProperty(value = "性别0男，1女",example = "0")
     private String sex;
 
-    @ApiModelProperty(value = "邮箱")
+    @ApiModelProperty(value = "邮箱",example = "383635738@qq.com")
     private String email;
 
-    @ApiModelProperty(value = "注册类型wx:微信，mobile：手机")
+    @ApiModelProperty(value = "注册类型wx:微信，mobile：手机",example = "wx")
+    @NotBlank(message = "注册类型")
     private String identityType;
 
     public String getMobile() {

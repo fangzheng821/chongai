@@ -48,7 +48,7 @@ public class ScheduleConfig {
         //JobStore配置
         prop.put("org.quartz.jobStore.class", "org.quartz.impl.jdbcjobstore.JobStoreTX");
         //集群配置
-        prop.put("org.quartz.jobStore.isClustered", "true");
+        prop.put("org.quartz.jobStore.isClustered", "false");
         prop.put("org.quartz.jobStore.clusterCheckinInterval", "15000");
         prop.put("org.quartz.jobStore.maxMisfiresToHandleAtATime", "1");
 
@@ -68,7 +68,7 @@ public class ScheduleConfig {
         //可选，QuartzScheduler 启动时更新己存在的Job，这样就不用每次修改targetObject后删除qrtz_job_details表对应记录了
         factory.setOverwriteExistingJobs(true);
         //设置自动启动，默认为true
-        factory.setAutoStartup(true);
+        factory.setAutoStartup(false);
 
         return factory;
     }

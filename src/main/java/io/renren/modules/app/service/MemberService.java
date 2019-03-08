@@ -2,9 +2,8 @@ package io.renren.modules.app.service;
 
 
 import com.baomidou.mybatisplus.service.IService;
-import io.renren.modules.app.entity.Member;
-import io.renren.modules.app.entity.MemberAuths;
-import io.renren.modules.app.form.LoginForm;
+import io.renren.modules.app.entity.setting.Member;
+import io.renren.modules.app.entity.setting.MemberAuths;
 
 /**
  * 用户

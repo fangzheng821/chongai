@@ -2,9 +2,9 @@ package io.renren.modules.app.service.impl;
 
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import io.renren.modules.app.dao.MemberDao;
-import io.renren.modules.app.entity.Member;
-import io.renren.modules.app.entity.MemberAuths;
+import io.renren.modules.app.dao.setting.MemberDao;
+import io.renren.modules.app.entity.setting.Member;
+import io.renren.modules.app.entity.setting.MemberAuths;
 import io.renren.modules.app.service.MemberAuthsService;
 import io.renren.modules.app.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;

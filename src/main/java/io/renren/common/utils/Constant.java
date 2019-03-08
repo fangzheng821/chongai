@@ -10,6 +10,9 @@ package io.renren.common.utils;
 public class Constant {
 	/** 超级管理员ID */
 	public static final int SUPER_ADMIN = 1;
+	
+    public static final String WX_TYPE="wx";
+    public static final String WX_IDENTIFIER="wx_openid";
 
 	/**
 	 * 菜单类型

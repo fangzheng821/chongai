@@ -48,7 +48,7 @@ import java.util.Map;
  * @date 2017-03-25 12:13:26
  */
 @RestController
-@RequestMapping("sys/oss")
+@RequestMapping("file/oss")
 public class SysOssController {
 	@Autowired
 	private SysOssService sysOssService;
@@ -111,7 +111,6 @@ public class SysOssController {
 	 * 上传文件
 	 */
 	@PostMapping("/upload")
-	@RequiresPermissions("sys:oss:all")
 	public R upload(@RequestParam("file") MultipartFile file) throws Exception {
 		if (file.isEmpty()) {
 			throw new RRException("上传文件不能为空");

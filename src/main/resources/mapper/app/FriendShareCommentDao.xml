@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.app.dao.friend.FriendShareCommentDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.app.entity.friend.FriendShareCommentEntity" id="friendShareCommentMap">
+        <result property="id" column="id"/>
+        <result property="fsmId" column="fsm_id"/>
+        <result property="memberId" column="member_id"/>
+        <result property="content" column="content"/>
+        <result property="createTime" column="create_time"/>
+        <result property="toMember" column="to_member"/>
+        <result property="likeCount" column="like_count"/>
+        <result property="readCount" column="read_count"/>
+    </resultMap>
+
+    <resultMap type="io.renren.modules.app.entity.friend.FriendShareCommentEntity" id="commentDtoMap">
+        <result property="memberName" column="member_name"/>
+        <result property="memberAvatar" column="member_avatar"/>
+        <result property="memberId" column="member_id"/>
+        <result property="content" column="content"/>
+        <result property="createTime" column="create_time"/>
+        <result property="likeCount" column="like_count"/>
+        <result property="readCount" column="read_count"/>
+    </resultMap>
+
+    <select id="queryByFsmId" parameterType="long" resultMap="commentDtoMap">
+        select c.content,c.create_time,c.like_count,c.read_count,m.name as member_name,m.avatar as member_avatar
+         from p_friend_share_comment c left join
+    </select>
+
+</mapper>
